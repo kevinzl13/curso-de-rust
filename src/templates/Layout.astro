@@ -1,0 +1,38 @@
+<html lang="es" class="dark">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<title>Curso de Rust</title>
+	</head>
+	<body>
+		<slot />
+		<style>
+			/* Fuerza todos los enlaces a blanco, incluso dentro de Markdown */
+			:global(a),
+			:global(.markdown a),
+			:global(ul a),
+			:global(ol a) {
+				color: #ffffff !important;
+				text-decoration: dashed !important;
+				cursor: pointer;
+			}
+			:global(body) {
+				background-color: #222;
+				color: #ffffff;
+				font-family: Arial, Helvetica, sans-serif;
+			}
+
+			/* Hover */
+			:global(a:hover),
+			:global(.markdown a:hover),
+			:global(ul a:hover),
+			:global(ol a:hover) {
+				text-decoration: underline !important;
+			}
+		</style>
+	</body>
+</html>
